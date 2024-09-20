@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maintenance</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <input
+                type="file"
+                id="fileInput"
+                style="visibility: hidden; position: absolute; z-index: -1"
+            />
+            <button id="importButton">Load</button>
+            <div class="logo" alt="logo"></div>
+            <div class="form">
+                <form>
+                    <input
+                        type="text"
+                        name="name"
+                        class="nameInput"
+                        placeholder="Customer Name"
+                    />
+                    <input
+                        type="text"
+                        name="num"
+                        class="numInput"
+                        placeholder="Customer Number"
+                    />
+                    <input
+                        type="text"
+                        name="device"
+                        class="deviceInput"
+                        placeholder="Customer Device"
+                    />
+                    <input
+                        type="textarea"
+                        name="description"
+                        class="descInput"
+                        placeholder="Description"
+                    />
+                    <input
+                        type="text"
+                        name="amount"
+                        class="amountInput"
+                        placeholder="Amount in L.E"
+                    />
+                    <!--  -->
+                    <div class="options">
+                        <!-- <div class="paid">
+                            <h4>Paid?</h4>
+                            <div class="pay">
+                                <input
+                                    type="radio"
+                                    id="yes"
+                                    name="pay"
+                                    value="yes"
+                                />
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="pay">
+                                <input
+                                    type="radio"
+                                    id="no"
+                                    name="pay"
+                                    value="no"
+                                    checked
+                                />
+                                <label for="no">NO</label>
+                            </div>
+                        </div> -->
+                        <div class="accessories">
+                            <h4>Accessories</h4>
+                            <div class="acs">
+                                <input
+                                    type="checkbox"
+                                    id="lap"
+                                    name="accessories"
+                                    value="Laptop"
+                                    checked
+                                />
+                                <label for="lap">Laptop</label>
+                            </div>
+							<div class="acs">
+                                <input
+                                    type="checkbox"
+                                    id="pc"
+                                    name="accessories"
+                                    value="PC"
+                                />
+                                <label for="pc">PC</label>
+                            </div>
+                            <div class="acs">
+                                <input
+                                    type="checkbox"
+                                    id="charger"
+                                    name="accessories"
+                                    value="Charger"
+                                />
+                                <label for="charger">Charger</label>
+                            </div>
+                            <div class="acs">
+                                <input
+                                    type="checkbox"
+                                    id="cable"
+                                    name="accessories"
+                                    value="Power cable"
+                                />
+                                <label for="cable">Power Cable</label>
+                            </div>
+                            <div class="acs">
+                                <input
+                                    type="checkbox"
+                                    id="bag"
+                                    name="accessories"
+                                    value="Bag"
+                                />
+                                <label for="bag">Bag</label>
+                            </div>
+                        </div>
+
+                        <div class="Employee">
+                            <h4>Employee</h4>
+                            <select name="emp" id="emp">
+                                <option value="Hisham Saleh" id="H">Hisham Saleh</option>
+                                <option value="Mostafa Bakry" id="MOBA">Mostafa Bakry</option>
+                                <option value="Mohamed Ibrahim" id="MI">Mohamed Ibrahim</option>
+                                <option value="Ibrahim Hassan" id="IH">Ibrahim Hassan</option>
+                                <option value="Mohamed Fathi" id="FA">Mohamed Fathi</option>
+                                <option value="Nada" id="N">Nada</option>
+                                <option value="Mohamed Shagar" id="S">Mohamed Shagar</option>
+                                <option value="Mohamed Essam" id="essam">Mohamed Essam</option>
+                                <option value="Mohamed Elaraby" id="elaraby">Mohamed Elaraby</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="actions">
+                        <input type="reset" class="reset" />
+                        <input type="submit" id="add" value="Save" />
+                    </div>
+                </form>
+            </div>
+            <div id="tasks"></div>
+        </div>
+        <div class="ticket"></div>
+        <script src="./js/main.js"></script>
+        <script src="./js/barcode.js"></script>
+        <script>
+            let ticket = document.querySelector(".ticket");
+            function printBarcode(num) {
+                JsBarcode("#barcode", num, {
+                    format: "CODE128",
+                    displayValue: false,
+                    width: 1,
+                    height: 40,
+                });
+            }
+        </script>
+    </body>
+</html>

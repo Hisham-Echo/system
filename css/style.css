@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 94vw;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    background-image: url("../hitech.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+    align-self: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.form {
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    width: 100%;
+}
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input:not([type="submit"], [type="reset"]) {
+    width: calc((100% / 5) - 42px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+/**/
+.nameInput,
+.numInput,
+.deviceInput,
+input.descInput,
+.amountInput {
+    background: #add8e6;
+}
+
+/**/
+input:focus {
+    outline: none;
+    border-color: #9688ff43;
+}
+#add,
+.reset,
+#importButton {
+    border: none;
+    background-color: #09b500;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.reset {
+    background-color: red;
+}
+#importButton {
+    background: #3434ff;
+}
+#tasks {
+    background-color: #eee;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+#tasks p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+#tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+#tasks .task:hover {
+    background-color: #f7f7f7;
+}
+#tasks .task.done {
+    opacity: 0.5;
+}
+button.update,
+button.barcode,
+button.del {
+    /* background-color: transparent; */
+    border: 2px solid rgb(144, 0, 255);
+    color: rgb(174, 0, 255);
+    cursor: pointer;
+}
+button.del {
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 17, 17);
+}
+button.barcode {
+    border-color: rgb(0, 0, 241);
+    color: rgb(0, 0, 255);
+}
+/* 
+ */
+table {
+    width: 100%;
+}
+table thead th:first-child,
+table thead th:nth-child(2),
+table thead th:nth-child(3),
+table thead th:nth-child(6),
+table thead th:nth-child(7) {
+    width: 12%;
+}
+table thead th:nth-child(5) {
+    width: 7%;
+}
+/* table thead th:nth-child(4) {
+    width: 20%;
+} */
+table thead th:last-child {
+    width: 8%;
+}
+table thead th:nth-last-child(2) {
+    width: 8%;
+}
+
+table thead th {
+    padding: 10px;
+    color: white;
+    background-color: rgb(0, 123, 255);
+}
+table thead th:first-child {
+    border-radius: 10px 0 0 0;
+    -webkit-border-radius: 10px 0 0px 0;
+    -moz-border-radius: 10px 0 0px 0;
+    -ms-border-radius: 10px 0 0px 0;
+    -o-border-radius: 10px 0 0px 0;
+}
+table thead th:last-child {
+    border-radius: 0 10px 0 0;
+    -webkit-border-radius: 0 10px 0 0;
+    -moz-border-radius: 0 10px 0 0;
+    -ms-border-radius: 0 10px 0 0;
+    -o-border-radius: 0 10px 0 0;
+}
+table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+    -webkit-border-radius: 0 0 10px 0;
+    -moz-border-radius: 0 0 10px 0;
+    -ms-border-radius: 0 0 10px 0;
+    -o-border-radius: 0 0 10px 0;
+}
+table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+    -webkit-border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    -ms-border-radius: 0 0 0 10px;
+    -o-border-radius: 0 0 0 10px;
+}
+table tbody tr td {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #ddd;
+}
+table tbody tr td input[type=text] {
+    background-color: #e6adad;
+    padding: 5px;
+    margin: 0;
+    width: calc(100% - 40px) !important;
+}
+table tbody tr td button {
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    width: initial;
+}
+h4 {
+    margin: 10px 0;
+}
+.options {
+    width: 90%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.acs {
+    padding: 2px;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+ul,ul li{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    padding-left: 15px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+/* .edit,.status{
+    display: flex;
+    flex-flow:column nowrap;
+} */
+
+/*color row*/
+.deliver {
+    background-color: lightgreen
+}
+.reject {
+    background-color: lightcoral;
+}
+.progress {
+    background-color: #fff34a;
+}
+
+/* status btns */
+.deliv{
+    border: 2px solid chartreuse;
+    color: green;
+}
+.rej{
+    border: 2px solid crimson;
+    color: crimson;
+}
+.prog{
+    border: 2px solid orange;
+    color: orange;
+}
+.prog,
+.rej,
+.deliv,
+button.update,
+button.barcode,
+button.del{
+    padding: 5px;
+    width: calc(100% - 10px);
+}
+
+/* print barcode */
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    min-width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    background-color: #fafafa;
+}
+select option {
+    height: 5px;
+    background-color: lightblue;
+}
+
+.ticket {
+    width: min-content;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+@media print {
+    div.container {
+        /* margin: 0; */
+        display: none;
+    }
+    .container,
+    .ticket,
+    .ticket h3,
+    .ticket p,
+    .logo {
+        display: block;
+    }
+    .ticket {
+        padding: 0;
+        margin: 0;
+    }
+}
