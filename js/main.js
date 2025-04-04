@@ -402,17 +402,6 @@ function appendAccessory(arr) {
     return list;
 }
 
-// Colorful Description
-function addDesc() {} 
-
-//
-function deliver() {}
-function progress() {}
-function reject() {}
-
 // 
-function searchCust() {}
-function sortCust() {}
-
-/* <th>Amount</th> */
-/* <td class="amount" title="paid 50 L.E.">000 L.E.</td> */
+// function searchCust() {}
+// function sortCust() {}

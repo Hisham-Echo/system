@@ -1,10 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
     width: 94vw;
-    margin: 20px auto;
+    margin: 20px auto 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -16,7 +18,7 @@ body {
     background-size: contain;
     width: 300px;
     height: 300px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     align-self: center;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -307,6 +309,30 @@ select {
 select option {
     height: 5px;
     background-color: lightblue;
+}
+
+footer {
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    background-color: rgb(1, 33, 68);
+    /* border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px; */
+    text-align: center;
+    line-height: 1.5;
+    color: rgb(228, 228, 228);
+    width: calc(100vw - 55px);
+
+}
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(0, 123, 255);
+    font-weight: bold;
 }
 
 .ticket {
